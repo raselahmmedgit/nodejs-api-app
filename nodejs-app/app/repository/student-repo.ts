@@ -1,7 +1,9 @@
 import {autoInjectable} from "tsyringe";
 import {DataTypes, ModelCtor,} from "sequelize";
 import {DbContext} from "./db_context";
-import {StudentModel} from "../model/student-model";
+import { StudentModel } from "../model/student-model";
+import { MessageHelper } from "../helper/message-helper";
+import ResultModel from "../core/result-model";
 
 @autoInjectable()
 export class StudentRepo {
@@ -46,6 +48,8 @@ export class StudentRepo {
             });
         } catch (error) {
             console.error('Unable to Create database: ', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result;
     }
@@ -60,6 +64,8 @@ export class StudentRepo {
             });
         } catch (error) {
             console.error('Unable to read database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result;
     }
@@ -75,6 +81,8 @@ export class StudentRepo {
 
         } catch (error) {
             console.error('Unable to read database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result;
     }
@@ -91,6 +99,8 @@ export class StudentRepo {
             });
         } catch (error) {
             console.error('Unable to update database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result == undefined ? "Unable to update database" : result[1][0];
     }
@@ -108,6 +118,8 @@ export class StudentRepo {
 
         } catch (error) {
             console.error('Unable to delete database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result == undefined ? "Unable to update database" : result[1][0];
     }

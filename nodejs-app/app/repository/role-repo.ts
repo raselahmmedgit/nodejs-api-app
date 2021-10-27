@@ -1,7 +1,9 @@
-import {autoInjectable} from "tsyringe";
-import {DataTypes, ModelCtor,} from "sequelize";
-import {DbContext} from "./db_context";
-import {RoleModel} from "../model/role-model";
+import { autoInjectable } from "tsyringe";
+import { DataTypes, ModelCtor, } from "sequelize";
+import { DbContext } from "./db_context";
+import { RoleModel } from "../model/role-model";
+import { MessageHelper } from "../helper/message-helper";
+import ResultModel from "../core/result-model";
 
 @autoInjectable()
 export class RoleRepo {
@@ -48,6 +50,8 @@ export class RoleRepo {
             });
         } catch (error) {
             console.error('Unable to Create database: ', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result;
     }
@@ -63,6 +67,8 @@ export class RoleRepo {
             });
         } catch (error) {
             console.error('Unable to read database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result;
     }
@@ -79,6 +85,8 @@ export class RoleRepo {
 
         } catch (error) {
             console.error('Unable to read database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result;
     }
@@ -86,7 +94,7 @@ export class RoleRepo {
     async UpdateRoleById(role: RoleModel) {
         let result;
         try {
-            result = await this.roleContext.update({RoleName: role.RoleName}, {
+            result = await this.roleContext.update({ RoleName: role.RoleName }, {
                 where: {
                     id: role.Id
                 },
@@ -95,6 +103,8 @@ export class RoleRepo {
             });
         } catch (error) {
             console.error('Unable to update database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result == undefined ? "Unable to update database" : result[1][0];
     }
@@ -102,7 +112,7 @@ export class RoleRepo {
     async DeleteRoleById(id: string) {
         let result;
         try {
-            result = await this.roleContext.update({isActive: true}, {
+            result = await this.roleContext.update({ isActive: true }, {
                 where: {
                     id: id
                 },
@@ -112,6 +122,8 @@ export class RoleRepo {
 
         } catch (error) {
             console.error('Unable to delete database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
         }
         return result == undefined ? "Unable to update database" : result[1][0];
     }
