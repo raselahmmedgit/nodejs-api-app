@@ -1,4 +1,4 @@
 export const AppConfig = {
     AppHost: "localhost",
-    AppPort: 3584
+    AppPort: 3574
 }
