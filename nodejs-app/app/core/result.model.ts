@@ -1,4 +1,4 @@
-import {MessageHelper} from "../helper/message-helper";
+import {MessageHelper} from "../helper/message.helper";
 
 class ResultModel {
     Success?: boolean;

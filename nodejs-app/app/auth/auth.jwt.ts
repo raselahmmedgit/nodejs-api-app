@@ -1,8 +1,8 @@
 import jwt from "jsonwebtoken"
 import { Request, Response, NextFunction } from "express"
-import { AuthConfig } from "../config/auth-config";
-import { MessageHelper } from "../helper/message-helper";
-import ResultModel from "../core/result-model";
+import { AuthConfig } from "../config/auth.config";
+import { MessageHelper } from "../helper/message.helper";
+import ResultModel from "../core/result.model";
 
 class AuthJwt {
 

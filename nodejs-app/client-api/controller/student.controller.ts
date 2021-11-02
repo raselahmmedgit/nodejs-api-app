@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express"
-import { StudentService } from "../../app/service/student-service";
+import { StudentService } from "../../app/service/student.service";
 import "reflect-metadata";
 import { container } from "tsyringe";
-import { StudentModel } from "../../app/model/student-model";
+import { StudentModel } from "../../app/model/student.model";
 
 class StudentController {
     constructor() { }

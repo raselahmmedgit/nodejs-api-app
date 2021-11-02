@@ -1,12 +1,12 @@
 ﻿import cors from 'cors';
 import express from 'express';
 import path from 'path';
-import homeController from "./controller/home-controller";
+import homeController from "./controller/home.controller";
 import {container} from "tsyringe";
-import { AppSettingsService } from "./../app/service/app-settings-service";
+import { AppSettingsService } from "./../app/service/appsettings.service";
 
-import { RouteConfig } from "./route/route-config";
-import { AuthRoutes } from "./route/auth-route";
+import { RouteConfig } from "./route/route.config";
+import { AuthRoutes } from "./route/auth.route";
 const routes: Array<RouteConfig> = [];
 
 const app = express();

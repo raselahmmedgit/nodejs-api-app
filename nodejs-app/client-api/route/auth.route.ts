@@ -1,10 +1,10 @@
 import { Application, Request, Response } from "express"
-import { RouteConfig } from "../route/route-config";
-import AuthController from "../controller/auth-controller";
-import RoleController from "../controller/role-controller";
-import UserController from "../controller/user-controller";
-import StudentController from "../controller/student-controller";
-import AuthJwt from "../../app/auth/auth-jwt";
+import { RouteConfig } from "../route/route.config";
+import AuthController from "../controller/auth.controller";
+import RoleController from "../controller/role.controller";
+import UserController from "../controller/user.controller";
+import StudentController from "../controller/student.controller";
+import AuthJwt from "../../app/auth/auth.jwt";
 
 export class AuthRoutes extends RouteConfig {
 

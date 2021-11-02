@@ -1,51 +1,71 @@
 import { autoInjectable } from "tsyringe";
-import { DataTypes, ModelCtor, } from "sequelize";
-import { DbContext } from "./db_context";
-import { RoleModel } from "../model/role-model";
-import { MessageHelper } from "../helper/message-helper";
-import ResultModel from "../core/result-model";
+import {DataTypes, ModelCtor,} from "sequelize";
+import {DbContext} from "./db.context";
+import { UserModel } from "../model/user.model";
+import { MessageHelper } from "../helper/message.helper";
+import ResultModel from "../core/result.model";
 
 @autoInjectable()
-export class RoleRepo {
-    roleContext: ModelCtor<any>;
+export class UserRepo {
+    userContext: ModelCtor<any>;
 
     constructor(private dbContext: DbContext) {
-        this.roleContext = this.dbContext.Context.define('roles', {
+        this.userContext = this.dbContext.Context.define('users', {
             // Model attributes are defined here
             Id: {
                 type: DataTypes.STRING,
                 primaryKey: true,
                 autoIncrement: true
             },
-            RoleName: {
+            UserName: {
                 type: DataTypes.STRING,
                 allowNull: false
             },
-            NormalizedRoleName: {
+            NormalizedUserName: {
                 type: DataTypes.STRING,
                 allowNull: false
             },
-            isActive: {
+            Email: {
+                type: DataTypes.STRING,
+                allowNull: false
+            },
+            NormalizedEmail: {
+                type: DataTypes.STRING,
+                allowNull: false
+            },
+            EmailConfirmed: {
+                type: DataTypes.BOOLEAN,
+                allowNull: true,
+                defaultValue: 1
+            },
+            PasswordHash: {
+                type: DataTypes.STRING,
+                allowNull: false
+            },
+            IsActive: {
                 type: DataTypes.BOOLEAN,
                 allowNull: true,
                 defaultValue: 1
             }
         }, {
             // Other model options go here
-            tableName: 'roles',
+            tableName: 'users',
             freezeTableName: true,
             timestamps: false,
             paranoid: false
         });
     }
 
-    async CreateRole(role: RoleModel) {
+    async CreateUser(user: UserModel) {
         let result;
         try {
-            result = await this.roleContext.create({
-                Id: role.Id,
-                RoleName: role.RoleName,
-                NormalizedRoleName: role.RoleName,
+            result = await this.userContext.create({
+                Id: user.Id,
+                UserName: user.UserName,
+                NormalizedUserName: user.UserName,
+                Email: user.Email,
+                NormalizedEmail: user.Email,
+                PasswordHash: user.PasswordHash,
                 IsActive: true
             });
         } catch (error) {
@@ -56,10 +76,10 @@ export class RoleRepo {
         return result;
     }
 
-    async GetRoleById(id: string) {
+    async GetUserById(id: string) {
         let result;
         try {
-            result = await this.roleContext.findOne({
+            result = await this.userContext.findOne({
                 where: {
                     id: id,
                     isActive: true
@@ -73,10 +93,27 @@ export class RoleRepo {
         return result;
     }
 
-    async GetRoles() {
+    async GetUserByEmail(email: string) {
         let result;
         try {
-            result = await this.roleContext.findAll({
+            result = await this.userContext.findOne({
+                where: {
+                    email: email,
+                    isActive: true
+                }
+            });
+        } catch (error) {
+            console.error('Unable to read database:', error);
+            result = ResultModel.Fail(MessageHelper.UnhandledError);
+            return result;
+        }
+        return result;
+    }
+
+    async GetUsers() {
+        let result;
+        try {
+            result = await this.userContext.findAll({
                 where: {
                     isActive: true
                 },
@@ -91,28 +128,26 @@ export class RoleRepo {
         return result;
     }
 
-    async UpdateRoleById(role: RoleModel) {
+    async UpdateUserById(user: UserModel) {
         let result;
         try {
-            result = await this.roleContext.update({ RoleName: role.RoleName }, {
+            result = await this.userContext.update({UserName: user.UserName}, {
                 where: {
-                    id: role.Id
+                    id: user.Id
                 },
                 limit: 1,
                 returning: true
             });
         } catch (error) {
             console.error('Unable to update database:', error);
-            result = ResultModel.Fail(MessageHelper.UnhandledError);
-            return result;
         }
         return result == undefined ? "Unable to update database" : result[1][0];
     }
 
-    async DeleteRoleById(id: string) {
+    async DeleteUserById(id: string) {
         let result;
         try {
-            result = await this.roleContext.update({ isActive: true }, {
+            result = await this.userContext.update({IsActive: true}, {
                 where: {
                     id: id
                 },

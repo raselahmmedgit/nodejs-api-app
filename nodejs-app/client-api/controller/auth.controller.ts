@@ -1,13 +1,13 @@
 import { NextFunction, Request, Response } from "express"
-import { AuthService } from "../../app/service/auth-service";
+import { AuthService } from "../../app/service/auth.service";
 import "reflect-metadata";
 import { container } from "tsyringe";
-import { LoginModel } from "../../app/model/login-model";
-import { LoginVerifyModel } from "../../app/model/loginverify-model";
-import { LogoutModel } from "../../app/model/logout-model";
-import { RegisterModel } from "../../app/model/register-model";
-import ResultModel from "../../app/core/result-model";
-import { MessageHelper } from "../../app/helper/message-helper";
+import { LoginModel } from "../../app/model/login.model";
+import { LoginVerifyModel } from "../../app/model/loginverify.model";
+import { LogoutModel } from "../../app/model/logout.model";
+import { RegisterModel } from "../../app/model/register.model";
+import ResultModel from "../../app/core/result.model";
+import { MessageHelper } from "../../app/helper/message.helper";
 
 
 class AuthController {

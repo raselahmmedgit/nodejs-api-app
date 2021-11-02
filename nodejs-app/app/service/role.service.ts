@@ -1,6 +1,6 @@
 import "reflect-metadata";
-import {RoleRepo} from "../repository/role-repo";
-import {RoleModel} from "../model/role-model";
+import {RoleRepo} from "../repository/role.repo";
+import {RoleModel} from "../model/role.model";
 import {autoInjectable} from "tsyringe";
 
 @autoInjectable()

@@ -1,6 +1,6 @@
 import "reflect-metadata";
-import {StudentRepo} from "../repository/student-repo";
-import {StudentModel} from "../model/student-model";
+import {StudentRepo} from "../repository/student.repo";
+import {StudentModel} from "../model/student.model";
 import {autoInjectable} from "tsyringe";
 
 @autoInjectable()

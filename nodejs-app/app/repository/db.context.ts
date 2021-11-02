@@ -1,7 +1,7 @@
 import {Sequelize,} from "sequelize";
 import {singleton} from "tsyringe";
-import {AppSettingsService} from "../service/app-settings-service";
-import {AppSettings} from "../model/app-settings";
+import {AppSettingsService} from "../service/appsettings.service";
+import {AppSettings} from "../model/app.settings";
 
 @singleton()
 export class DbContext {

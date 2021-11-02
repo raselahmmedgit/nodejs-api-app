@@ -1,9 +1,9 @@
 import {autoInjectable} from "tsyringe";
 import {DataTypes, ModelCtor,} from "sequelize";
-import {DbContext} from "./db_context";
-import { StudentModel } from "../model/student-model";
-import { MessageHelper } from "../helper/message-helper";
-import ResultModel from "../core/result-model";
+import {DbContext} from "./db.context";
+import { StudentModel } from "../model/student.model";
+import { MessageHelper } from "../helper/message.helper";
+import ResultModel from "../core/result.model";
 
 @autoInjectable()
 export class StudentRepo {

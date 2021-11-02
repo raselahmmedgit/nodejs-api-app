@@ -1,7 +1,7 @@
-import {AppSettings} from "../model/app-settings";
+import {AppSettings} from "../model/app.settings";
 import {singleton} from "tsyringe";
-import {AppConfig} from "../config/app-config";
-import {DbConfig} from "../config/db-config";
+import {AppConfig} from "../config/app.config";
+import {DbConfig} from "../config/db.config";
 import {Observable, of} from "rxjs";
 
 @singleton()

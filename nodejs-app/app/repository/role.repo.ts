@@ -1,46 +1,52 @@
-import {autoInjectable} from "tsyringe";
-import {DataTypes, ModelCtor,} from "sequelize";
-import {DbContext} from "./db_context";
-import { UserRoleModel } from "../model/user-role-model";
-import { MessageHelper } from "../helper/message-helper";
-import ResultModel from "../core/result-model";
+import { autoInjectable } from "tsyringe";
+import { DataTypes, ModelCtor, } from "sequelize";
+import { DbContext } from "./db.context";
+import { RoleModel } from "../model/role.model";
+import { MessageHelper } from "../helper/message.helper";
+import ResultModel from "../core/result.model";
 
 @autoInjectable()
-export class UserRoleRepo {
-    userRoleContext: ModelCtor<any>;
+export class RoleRepo {
+    roleContext: ModelCtor<any>;
 
     constructor(private dbContext: DbContext) {
-        this.userRoleContext = this.dbContext.Context.define('userroles', {
+        this.roleContext = this.dbContext.Context.define('roles', {
             // Model attributes are defined here
             Id: {
                 type: DataTypes.STRING,
                 primaryKey: true,
                 autoIncrement: true
             },
-            UserId: {
+            RoleName: {
                 type: DataTypes.STRING,
                 allowNull: false
             },
-            RoleId: {
+            NormalizedRoleName: {
                 type: DataTypes.STRING,
                 allowNull: false
+            },
+            isActive: {
+                type: DataTypes.BOOLEAN,
+                allowNull: true,
+                defaultValue: 1
             }
         }, {
             // Other model options go here
-            tableName: 'userroles',
+            tableName: 'roles',
             freezeTableName: true,
             timestamps: false,
             paranoid: false
         });
     }
 
-    async CreateUserRole(userRole: UserRoleModel) {
+    async CreateRole(role: RoleModel) {
         let result;
         try {
-            result = await this.userRoleContext.create({
-                Id: userRole.Id,
-                UserId: userRole.UserId,
-                RoleId: userRole.RoleId,
+            result = await this.roleContext.create({
+                Id: role.Id,
+                RoleName: role.RoleName,
+                NormalizedRoleName: role.RoleName,
+                IsActive: true
             });
         } catch (error) {
             console.error('Unable to Create database: ', error);
@@ -50,12 +56,13 @@ export class UserRoleRepo {
         return result;
     }
 
-    async GetUserRoleById(id: string) {
+    async GetRoleById(id: string) {
         let result;
         try {
-            result = await this.userRoleContext.findOne({
+            result = await this.roleContext.findOne({
                 where: {
-                    userId: id
+                    id: id,
+                    isActive: true
                 }
             });
         } catch (error) {
@@ -66,11 +73,12 @@ export class UserRoleRepo {
         return result;
     }
 
-    async GetUserRoles() {
+    async GetRoles() {
         let result;
         try {
-            result = await this.userRoleContext.findAll({
+            result = await this.roleContext.findAll({
                 where: {
+                    isActive: true
                 },
                 limit: 100
             });
@@ -83,12 +91,12 @@ export class UserRoleRepo {
         return result;
     }
 
-    async UpdateUserRoleById(userRole: UserRoleModel) {
+    async UpdateRoleById(role: RoleModel) {
         let result;
         try {
-            result = await this.userRoleContext.update({RoleId: userRole.RoleId}, {
+            result = await this.roleContext.update({ RoleName: role.RoleName }, {
                 where: {
-                    userId: userRole.UserId
+                    id: role.Id
                 },
                 limit: 1,
                 returning: true
@@ -101,12 +109,12 @@ export class UserRoleRepo {
         return result == undefined ? "Unable to update database" : result[1][0];
     }
 
-    async DeleteUserRoleById(id: string) {
+    async DeleteRoleById(id: string) {
         let result;
         try {
-            result = await this.userRoleContext.update({isActive: true}, {
+            result = await this.roleContext.update({ isActive: true }, {
                 where: {
-                    userUserId: id
+                    id: id
                 },
                 limit: 1,
                 returning: true

@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express"
-import { UserService } from "../../app/service/user-service";
+import { UserService } from "../../app/service/user.service";
 import "reflect-metadata";
 import { container } from "tsyringe";
-import { UserModel } from "../../app/model/user-model";
+import { UserModel } from "../../app/model/user.model";
 
 class UserController {
     constructor() { }

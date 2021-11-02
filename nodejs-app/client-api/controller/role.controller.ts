@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express"
-import { RoleService } from "../../app/service/role-service";
+import { RoleService } from "../../app/service/role.service";
 import "reflect-metadata";
 import { container } from "tsyringe";
-import { RoleModel } from "../../app/model/role-model";
+import { RoleModel } from "../../app/model/role.model";
 
 class RoleController {
     constructor() { }

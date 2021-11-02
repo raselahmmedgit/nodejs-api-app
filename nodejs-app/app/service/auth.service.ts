@@ -1,24 +1,22 @@
 import "reflect-metadata";
-import { RoleModel } from "../../app/model/role-model";
-import { UserModel } from "../../app/model/user-model";
-import { UserRoleModel } from "../../app/model/user-role-model";
-import { UserRepo } from "../repository/user-repo";
-import { RoleRepo } from "../repository/role-repo";
-import { UserRoleRepo } from "../repository/user-role-repo";
-import { LoginModel } from "../model/login-model";
-import { LoginVerifyModel } from "../model/loginverify-model";
-import { LogoutModel } from "../model/logout-model";
-import { RegisterModel } from "../model/register-model";
-import { MessageHelper } from "../helper/message-helper";
-import { AuthConfig } from "../config/auth-config";
+import { RoleModel } from "../../app/model/role.model";
+import { UserModel } from "../../app/model/user.model";
+import { UserRoleModel } from "../../app/model/userrole.model";
+import { UserRepo } from "../repository/user.repo";
+import { RoleRepo } from "../repository/role.repo";
+import { UserRoleRepo } from "../repository/userrole.repo";
+import { LoginModel } from "../model/login.model";
+import { LoginVerifyModel } from "../model/loginverify.model";
+import { LogoutModel } from "../model/logout.model";
+import { RegisterModel } from "../model/register.model";
+import { MessageHelper } from "../helper/message.helper";
+import { AuthConfig } from "../config/auth.config";
 import { autoInjectable } from "tsyringe";
 import { Guid } from "guid-typescript";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"
-import ResultModel from "../core/result-model";
-import { RoleEnum } from "../core/role-enum";
-import { RoleEnumLabel } from "../core/role-enum";
-
+import ResultModel from "../core/result.model";
+import { RoleEnum, RoleEnumLabel } from "../core/role.enum";
 
 @autoInjectable()
 export class AuthService {
