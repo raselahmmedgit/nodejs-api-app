@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended: false}));
 
 //Declare application home router
 app.use('/', homeController);
-app.use('/cteds', homeController);
+app.use('/CustomerTripAPI/operationalPnr', homeController);
 //Declare application home router
 
 //Declare application auth router

@@ -13,7 +13,7 @@ homeRouter.get('/', async function (req, res) {
     res.sendFile( viewPath + "/index.html" );
 });
 
-homeRouter.get('/cteds', async function (req, res) {
+homeRouter.get('/CustomerTripAPI/operationalPnr', async function (req, res) {
     console.log("Got a GET request for the cteds json");
     let result;
     fs.readFile("./db-json/cteds_response.json", "utf8", (err, data) => {
@@ -28,6 +28,8 @@ homeRouter.get('/cteds', async function (req, res) {
             result = JSON.parse(data);
             console.log("result :", result);
             res.json(result);
+            //var openApiResult = { response: 'success', body: result.customerTripAPIPassengerVo };
+            //res.json(openApiResult);
         } catch (err) {
             console.log("Error parsing JSON string:", err);
             result = ResultModel.Fail(MessageHelper.UnhandledError);
