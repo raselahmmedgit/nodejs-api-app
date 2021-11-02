@@ -2,12 +2,13 @@
   "name": "nodejsexpressjwt",
   "version": "1.0.0",
   "description": "nodejs express jwt",
-  "main": "app.ts",
+  "main": "app.js",
   "scripts": {
     "init": "npm install express sequelize reflect-metadata typescript ts-node mysql2 body-parser cors jsonwebtoken bcrypt nodemon rxjs tsyringe tedious guid-typescript express-validator --save",
     "init-dev": "npm install @types/node @types/express @types/sequelize @types/typescript @types/body-parser @types/cors @types/jsonwebtoken @types/bcrypt @types/express-validator --save-dev",
-    "serve": "nodemon client-api/app.ts",
+    "serve": "nodemon client-api/app.js",
     "start": "npm run serve",
+    "compile": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
