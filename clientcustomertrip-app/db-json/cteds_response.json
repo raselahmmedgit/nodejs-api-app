@@ -1,0 +1,303 @@
+{
+  "recordLocatorId": "G7Y6YN",
+  "pnrFileAdr": "6EDAA265",
+  "customerTripAPIPassengerVo": [
+    {
+      "passengerInfo": {
+        "lastName": "ASANTE",
+        "firstName": "GIDEON",
+        "customerId": "9969129304003",
+        "bookingId": "2021091500073406",
+        "loyaltyTierCode": null,
+        "slsPrtnrId": "",
+        "ssrCode": "",
+        "pidCustId": "0",
+        "groupName": "",
+        "groupId": "",
+        "bookingGroupTypeCode": "",
+        "otherAirlineIndicatorCode": "F",
+        "passengerCnt": 1
+      },
+      "segmentInfo": {
+        "prevBookingClassOfServiceCode": "",
+        "bookingClassOfServiceUpgradeCode": "",
+        "bookingClassOfServiceDowngradeCode": "",
+        "cabinCode": "Y",
+        "prevCabinCode": "",
+        "cabinUpgradeIndicatorCode": "F",
+        "cabinDowngradeIndicatorCode": "F",
+        "seatCompartmentCode": "",
+        "seatStatusCode": "",
+        "seatId": "",
+        "boardingStatusCode": "",
+        "flightOriginDate": "2021-10-07",
+        "pnrItinSegmentOrdNum": 7,
+        "otherAirlineInvSpaceHeldIndCode": "",
+        "marketingCarrierCode": "DL",
+        "marketingFlightNum": "2421",
+        "bookingClassofServiceCode": "E ",
+        "scheduledDepartureLocalDate": "2021-10-07",
+        "scheduledOrgStationCode": "MSN",
+        "scheduledDestStationCode": "ATL",
+        "flightSegmentStatusCode": "HK",
+        "checkinStatusCode": ""
+      },
+      "segmentIdentifierFlags": {
+        "segmentInPnrChgUtcTs": "2021-10-05 13:35:49.847",
+        "tripOprlNum": 1,
+        "segmentInPnrIndicatorCode": "T",
+        "protSegmentIndicatorCode": null,
+        "tripFinalSegmentIndicatorCode": "T"
+      },
+      "tripImpactInfo": {
+        "tripOrglSegmentgFndIndicatorCode": null,
+        "paxImpactStatusCode": "",
+        "tripImpactCsText": "",
+        "tripImpactNum": null,
+        "tripIropSegmentIndicatorCode": null,
+        "tripImpactMntDlyNum": null,
+        "tripImpactStatusCode": ""
+      },
+      "flightDetails": {
+        "operatingCarrierCode": "",
+        "operatingFlightNum": "",
+        "actualLegInGateUtcTs": "",
+        "actualLegOffTrpnStnUtcTs": "",
+        "actualLegOnTrpnStnUtcTs": "",
+        "actualLegOutOfGateUtcTs": "",
+        "intlSegmentIndicatorCode": "F"
+      },
+      "localOperationalFlightTimes": {
+        "scheduledVsActualDepMinNum": 0,
+        "bestDepartureLocalTs": "2021-10-07 06:00:00.0",
+        "bestArrivalLocalTs": "2021-10-07 09:02:00.0",
+        "minConnectTmNum": "",
+        "scheduledVsActualArrivalMinNum": 0,
+        "scheduledDepartureLocalTs": "2021-10-07 06:00:00.0",
+        "scheduledArrivalLocalTs": "2021-10-07 09:02:00.0"
+      },
+      "gtsOperationalFlightTimes": {
+        "bestDepartureUtcTs": "2021-10-07 11:00:00.0",
+        "bestArrivalUtcTs": "2021-10-07 13:02:00.0",
+        "scheduledDepartureUtcTs": "2021-10-07 11:00:00.0",
+        "scheduledArrivalUtcTs": "2021-10-07 13:02:00.0"
+      },
+      "flightIrop": {
+        "totalEtdMsgCnt": 0,
+        "totalEtaMsgCnt": 0,
+        "flightStatus": "NO_IROP",
+        "iropIndicator": "F",
+        "divertedIndicator": "F",
+        "divertedUnscheduledIndicator": "F",
+        "returnedIndicator": "F",
+        "reinstatedIndicator": "F",
+        "canceledIndicator": "F",
+        "departureDlyIndicator": "F",
+        "arrivalDlyIndicator": "F",
+        "misconnectIndicator": "F"
+      },
+      "rowTimestamps": {
+        "initRowInsertedUtcTs": "2021-10-05 13:35:49.847",
+        "lastUpdtUtcTs": "2021-10-05 13:35:49.848"
+      }
+    },
+    {
+      "passengerInfo": {
+        "lastName": "ASANTE",
+        "firstName": "GIDEON",
+        "customerId": "9969129304003",
+        "bookingId": "2021091500073406",
+        "loyaltyTierCode": null,
+        "slsPrtnrId": "",
+        "ssrCode": "CTCECTCM",
+        "pidCustId": "0",
+        "groupName": "",
+        "groupId": "",
+        "bookingGroupTypeCode": "",
+        "otherAirlineIndicatorCode": "F",
+        "passengerCnt": 1
+      },
+      "segmentInfo": {
+        "prevBookingClassOfServiceCode": "",
+        "bookingClassOfServiceUpgradeCode": "",
+        "bookingClassOfServiceDowngradeCode": "",
+        "cabinCode": "Y",
+        "prevCabinCode": "",
+        "cabinUpgradeIndicatorCode": "F",
+        "cabinDowngradeIndicatorCode": "F",
+        "seatCompartmentCode": "Y",
+        "seatStatusCode": "RS",
+        "seatId": "27D",
+        "boardingStatusCode": "",
+        "flightOriginDate": "2021-10-11",
+        "pnrItinSegmentOrdNum": 9,
+        "otherAirlineInvSpaceHeldIndCode": "",
+        "marketingCarrierCode": "DL",
+        "marketingFlightNum": "463",
+        "bookingClassofServiceCode": "E ",
+        "scheduledDepartureLocalDate": "2021-10-11",
+        "scheduledOrgStationCode": "ATL",
+        "scheduledDestStationCode": "MSP",
+        "flightSegmentStatusCode": "HK",
+        "checkinStatusCode": ""
+      },
+      "segmentIdentifierFlags": {
+        "segmentInPnrChgUtcTs": "2021-10-11 15:45:24.903",
+        "tripOprlNum": 2,
+        "segmentInPnrIndicatorCode": "T",
+        "protSegmentIndicatorCode": null,
+        "tripFinalSegmentIndicatorCode": null
+      },
+      "tripImpactInfo": {
+        "tripOrglSegmentgFndIndicatorCode": null,
+        "paxImpactStatusCode": "",
+        "tripImpactCsText": "",
+        "tripImpactNum": null,
+        "tripIropSegmentIndicatorCode": "P",
+        "tripImpactMntDlyNum": null,
+        "tripImpactStatusCode": ""
+      },
+      "flightDetails": {
+        "operatingCarrierCode": "",
+        "operatingFlightNum": "",
+        "actualLegInGateUtcTs": "",
+        "actualLegOffTrpnStnUtcTs": "",
+        "actualLegOnTrpnStnUtcTs": "",
+        "actualLegOutOfGateUtcTs": "",
+        "intlSegmentIndicatorCode": "F"
+      },
+      "localOperationalFlightTimes": {
+        "scheduledVsActualDepMinNum": 80,
+        "bestDepartureLocalTs": "2021-10-11 11:15:00.0",
+        "bestArrivalLocalTs": "2021-10-11 12:58:00.0",
+        "minConnectTmNum": "",
+        "scheduledVsActualArrivalMinNum": 80,
+        "scheduledDepartureLocalTs": "2021-10-11 09:55:00.0",
+        "scheduledArrivalLocalTs": "2021-10-11 11:38:00.0"
+      },
+      "gtsOperationalFlightTimes": {
+        "bestDepartureUtcTs": "2021-10-11 15:15:00.0",
+        "bestArrivalUtcTs": "2021-10-11 17:58:00.0",
+        "scheduledDepartureUtcTs": "2021-10-11 13:55:00.0",
+        "scheduledArrivalUtcTs": "2021-10-11 16:38:00.0"
+      },
+      "flightIrop": {
+        "totalEtdMsgCnt": 1,
+        "totalEtaMsgCnt": 1,
+        "flightStatus": "DA_DLY",
+        "iropIndicator": "T",
+        "divertedIndicator": "F",
+        "divertedUnscheduledIndicator": "F",
+        "returnedIndicator": "F",
+        "reinstatedIndicator": "F",
+        "canceledIndicator": "F",
+        "departureDlyIndicator": "T",
+        "arrivalDlyIndicator": "T",
+        "misconnectIndicator": "F"
+      },
+      "rowTimestamps": {
+        "initRowInsertedUtcTs": "2021-10-11 15:45:24.903",
+        "lastUpdtUtcTs": "2021-10-11 15:45:27.774"
+      }
+    },
+    {
+      "passengerInfo": {
+        "lastName": "ASANTE",
+        "firstName": "GIDEON",
+        "customerId": "9969129304003",
+        "bookingId": "2021091500073406",
+        "loyaltyTierCode": null,
+        "slsPrtnrId": "",
+        "ssrCode": "CTCECTCM",
+        "pidCustId": "0",
+        "groupName": "",
+        "groupId": "",
+        "bookingGroupTypeCode": "",
+        "otherAirlineIndicatorCode": "F",
+        "passengerCnt": 1
+      },
+      "segmentInfo": {
+        "prevBookingClassOfServiceCode": "",
+        "bookingClassOfServiceUpgradeCode": "",
+        "bookingClassOfServiceDowngradeCode": "",
+        "cabinCode": "Y",
+        "prevCabinCode": "",
+        "cabinUpgradeIndicatorCode": "F",
+        "cabinDowngradeIndicatorCode": "F",
+        "seatCompartmentCode": "Y",
+        "seatStatusCode": "CI",
+        "seatId": "16B",
+        "boardingStatusCode": "",
+        "flightOriginDate": "2021-10-11",
+        "pnrItinSegmentOrdNum": 83,
+        "otherAirlineInvSpaceHeldIndCode": "",
+        "marketingCarrierCode": "DL",
+        "marketingFlightNum": "3953",
+        "bookingClassofServiceCode": "Y ",
+        "scheduledDepartureLocalDate": "2021-10-11",
+        "scheduledOrgStationCode": "MSP",
+        "scheduledDestStationCode": "MSN",
+        "flightSegmentStatusCode": "HK",
+        "checkinStatusCode": "CI"
+      },
+      "segmentIdentifierFlags": {
+        "segmentInPnrChgUtcTs": "2021-10-11 15:45:24.903",
+        "tripOprlNum": 2,
+        "segmentInPnrIndicatorCode": "T",
+        "protSegmentIndicatorCode": "P",
+        "tripFinalSegmentIndicatorCode": "T"
+      },
+      "tripImpactInfo": {
+        "tripOrglSegmentgFndIndicatorCode": "T",
+        "paxImpactStatusCode": "TRIP_NOT_BEGUN",
+        "tripImpactCsText": "CURRENT_TRIP_IROP",
+        "tripImpactNum": 2,
+        "tripIropSegmentIndicatorCode": "S",
+        "tripImpactMntDlyNum": 154,
+        "tripImpactStatusCode": "PROT_SEGMENT"
+      },
+      "flightDetails": {
+        "operatingCarrierCode": "",
+        "operatingFlightNum": "",
+        "actualLegInGateUtcTs": "2021-10-11 21:19:00.0",
+        "actualLegOffTrpnStnUtcTs": "2021-10-11 20:35:00.0",
+        "actualLegOnTrpnStnUtcTs": "2021-10-11 21:15:00.0",
+        "actualLegOutOfGateUtcTs": "2021-10-11 20:23:00.0",
+        "intlSegmentIndicatorCode": "F"
+      },
+      "localOperationalFlightTimes": {
+        "scheduledVsActualDepMinNum": -2,
+        "bestDepartureLocalTs": "2021-10-11 15:23:00.0",
+        "bestArrivalLocalTs": "2021-10-11 16:19:00.0",
+        "minConnectTmNum": "",
+        "scheduledVsActualArrivalMinNum": -10,
+        "scheduledDepartureLocalTs": "2021-10-11 15:25:00.0",
+        "scheduledArrivalLocalTs": "2021-10-11 16:29:00.0"
+      },
+      "gtsOperationalFlightTimes": {
+        "bestDepartureUtcTs": "2021-10-11 20:23:00.0",
+        "bestArrivalUtcTs": "2021-10-11 21:19:00.0",
+        "scheduledDepartureUtcTs": "2021-10-11 20:25:00.0",
+        "scheduledArrivalUtcTs": "2021-10-11 21:29:00.0"
+      },
+      "flightIrop": {
+        "totalEtdMsgCnt": 0,
+        "totalEtaMsgCnt": 0,
+        "flightStatus": "NO_IROP",
+        "iropIndicator": "F",
+        "divertedIndicator": "F",
+        "divertedUnscheduledIndicator": "F",
+        "returnedIndicator": "F",
+        "reinstatedIndicator": "F",
+        "canceledIndicator": "F",
+        "departureDlyIndicator": "F",
+        "arrivalDlyIndicator": "F",
+        "misconnectIndicator": "F"
+      },
+      "rowTimestamps": {
+        "initRowInsertedUtcTs": "2021-10-11 15:45:24.903",
+        "lastUpdtUtcTs": "2021-10-11 21:20:33.941"
+      }
+    }
+  ]
+}
